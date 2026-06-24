@@ -1,0 +1,22 @@
+{
+  "total": 131,
+  "passed": 119,
+  "failed": 12,
+  "warnings": 0,
+  "production_readiness_pct": 90.8,
+  "demo_ready": false,
+  "issues": [
+    "backend.api.coach_api: No module named 'cv2'",
+    "backend.services.bogie_mapper: No module named 'cv2'",
+    "backend.services.coach_ocr: No module named 'cv2'",
+    "ml.models.anomaly_classifier: No module named 'cv2'",
+    "ml.inference.pipeline: No module named 'cv2'",
+    "ml.datasets.download_datasets: No module named 'cv2'",
+    "Bogie Mapper: No module named 'cv2'",
+    "Fusion Engine: No module named 'cv2'",
+    "XAI Engine: No module named 'cv2'",
+    "Anomaly Classifier: No module named 'cv2'",
+    "Pose Estimator: No module named 'cv2'",
+    "Inference Pipeline: No module named 'cv2'"
+  ]
+}

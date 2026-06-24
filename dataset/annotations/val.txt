@@ -1,0 +1,3 @@
+C:\Users\C aksheth kumar\Desktop\DigitalShield\dataset\raw\simulated\dragging\sim_dragging_81601.mp4	0
+C:\Users\C aksheth kumar\Desktop\DigitalShield\dataset\raw\simulated\panic\sim_panic_51688.mp4	0
+C:\Users\C aksheth kumar\Desktop\DigitalShield\dataset\raw\simulated\normal\sim_normal_16629.mp4	0

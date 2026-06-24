@@ -1,0 +1,36 @@
+# Digital Shield Rail Defense — ML Pipeline Requirements
+# =====================================================
+
+# Core ML frameworks
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+shap>=0.43.0
+
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Computer Vision
+opencv-python-headless>=4.8.0
+ultralytics>=8.1.0
+deep-sort-realtime>=1.3.0
+Pillow>=10.0.0
+
+# Data Processing
+pandas>=2.0.0
+pyarrow>=12.0.0
+
+# HTTP & Downloads
+requests>=2.31.0
+tqdm>=4.65.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+loguru>=0.7.0
+
+# OCR (for ticket scanning)
+pytesseract>=0.3.10
+easyocr>=1.7.0

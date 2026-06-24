@@ -1,0 +1,154 @@
+version: '3.8'
+
+services:
+  # ============================================================
+  # API Backend (FastAPI + Uvicorn)
+  # ============================================================
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ds-api
+    ports:
+      - "8000:8000"
+    env_file: .env
+    environment:
+      - DB_HOST=db
+      - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - ./output:/app/output
+      - ./logs:/app/logs
+      - model-weights:/app/dataset/models/weights
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - ds-network
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2.0'
+
+  # ============================================================
+  # PostgreSQL Database
+  # ============================================================
+  db:
+    image: postgres:15-alpine
+    container_name: ds-db
+    env_file: .env
+    environment:
+      POSTGRES_DB: ${DB_NAME:-digital_shield}
+      POSTGRES_USER: ${DB_USER:-ds_admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-ds_secure_2026}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./deploy/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-ds_admin} -d ${DB_NAME:-digital_shield}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - ds-network
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  # ============================================================
+  # Redis (Caching + Rate Limiting)
+  # ============================================================
+  redis:
+    image: redis:7-alpine
+    container_name: ds-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - ds-network
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+  # ============================================================
+  # Nginx Reverse Proxy (Frontend + API)
+  # ============================================================
+  nginx:
+    image: nginx:alpine
+    container_name: ds-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./frontend/dist:/usr/share/nginx/html:ro
+      - ./logs/nginx:/var/log/nginx
+    depends_on:
+      - api
+    restart: unless-stopped
+    networks:
+      - ds-network
+
+  # ============================================================
+  # Prometheus (Metrics Collection)
+  # ============================================================
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: ds-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./deploy/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheusdata:/prometheus
+    restart: unless-stopped
+    networks:
+      - ds-network
+    profiles:
+      - monitoring
+
+  # ============================================================
+  # Grafana (Dashboard)
+  # ============================================================
+  grafana:
+    image: grafana/grafana:latest
+    container_name: ds-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=digital_shield_2026
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafanadata:/var/lib/grafana
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+    networks:
+      - ds-network
+    profiles:
+      - monitoring
+
+volumes:
+  pgdata:
+  redisdata:
+  model-weights:
+  prometheusdata:
+  grafanadata:
+
+networks:
+  ds-network:
+    driver: bridge

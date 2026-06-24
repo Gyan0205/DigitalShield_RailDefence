@@ -1,0 +1,14 @@
+{
+  "video_id": "8793d3e8f1d4",
+  "video_file": "test_dataset\\raw\\set1\\cam_v002.mp4",
+  "video_name": "cam_v002.mp4",
+  "dataset": "set1",
+  "station": {
+    "code": "SC",
+    "name": "Secunderabad Junction"
+  },
+  "platform_number": 8,
+  "date": "2026-01-27",
+  "time": "21:15",
+  "day": "Tuesday"
+}

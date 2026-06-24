@@ -1,0 +1,17 @@
+{
+  "distribution": {
+    "normal": {
+      "total": 21,
+      "train": 14,
+      "val": 3,
+      "test": 4
+    }
+  },
+  "total_samples": 21,
+  "stats": {
+    "total": 21,
+    "annotated": 21,
+    "normal": 21,
+    "anomalous": 0
+  }
+}

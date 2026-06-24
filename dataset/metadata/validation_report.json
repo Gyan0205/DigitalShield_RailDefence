@@ -1,0 +1,275 @@
+{
+  "timestamp": "2026-05-12T01:33:06.412476",
+  "summary": {
+    "total_checks": 47,
+    "passed": 40,
+    "failed": 7,
+    "pass_rate": "85.1%",
+    "errors": 0,
+    "warnings": 7
+  },
+  "sections": {
+    "validate_directory_structure": true,
+    "validate_raw_datasets": false,
+    "validate_processed_data": false,
+    "validate_annotations": false,
+    "validate_metadata": true,
+    "validate_split_balance": true,
+    "validate_file_formats": true,
+    "validate_cross_references": true
+  },
+  "errors": [],
+  "warnings": [
+    "[Dataset present: ucf_crime] ucf_crime: no files",
+    "[Dataset present: ucsd_pedestrian] ucsd_pedestrian: no files",
+    "[Dataset present: shanghaitech] shanghaitech: no files",
+    "[Dataset present: railway_cctv] railway_cctv: no files",
+    "[Processed clips exist] No processed clips in C:\\Users\\C aksheth kumar\\Desktop\\DigitalShield\\dataset\\processed\\clips",
+    "[Multiple classes present] Only 1 class(es) found",
+    "[Anomalous samples present] No anomalous samples in annotations"
+  ],
+  "checks": [
+    {
+      "check": "Directory exists: dataset/raw",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.080885"
+    },
+    {
+      "check": "Directory exists: dataset/processed",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.081453"
+    },
+    {
+      "check": "Directory exists: dataset/processed/frames",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.081891"
+    },
+    {
+      "check": "Directory exists: dataset/processed/clips",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.082383"
+    },
+    {
+      "check": "Directory exists: dataset/annotations",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.082915"
+    },
+    {
+      "check": "Directory exists: dataset/metadata",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.083417"
+    },
+    {
+      "check": "Directory exists: dataset/models",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.083670"
+    },
+    {
+      "check": "Dataset present: ucf_crime",
+      "passed": false,
+      "timestamp": "2026-05-12T01:33:06.084787",
+      "warning": "ucf_crime: no files"
+    },
+    {
+      "check": "Dataset present: ucsd_pedestrian",
+      "passed": false,
+      "timestamp": "2026-05-12T01:33:06.085584",
+      "warning": "ucsd_pedestrian: no files"
+    },
+    {
+      "check": "Dataset present: shanghaitech",
+      "passed": false,
+      "timestamp": "2026-05-12T01:33:06.086968",
+      "warning": "shanghaitech: no files"
+    },
+    {
+      "check": "Dataset present: railway_cctv",
+      "passed": false,
+      "timestamp": "2026-05-12T01:33:06.087920",
+      "warning": "railway_cctv: no files"
+    },
+    {
+      "check": "Dataset present: simulated",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.094001"
+    },
+    {
+      "check": "Extracted frames exist",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.365125"
+    },
+    {
+      "check": "Processed clips exist",
+      "passed": false,
+      "timestamp": "2026-05-12T01:33:06.365842",
+      "warning": "No processed clips in C:\\Users\\C aksheth kumar\\Desktop\\DigitalShield\\dataset\\processed\\clips"
+    },
+    {
+      "check": "annotations.json exists",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.366114"
+    },
+    {
+      "check": "Annotations not empty",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.366643"
+    },
+    {
+      "check": "Field present: video_id",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.366767"
+    },
+    {
+      "check": "Field present: video_path",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.366826"
+    },
+    {
+      "check": "Field present: class_id",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.366874"
+    },
+    {
+      "check": "Field present: class_name",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.366914"
+    },
+    {
+      "check": "Field present: is_anomalous",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.366955"
+    },
+    {
+      "check": "Multiple classes present",
+      "passed": false,
+      "timestamp": "2026-05-12T01:33:06.367001",
+      "warning": "Only 1 class(es) found"
+    },
+    {
+      "check": "Anomalous samples present",
+      "passed": false,
+      "timestamp": "2026-05-12T01:33:06.367117",
+      "warning": "No anomalous samples in annotations"
+    },
+    {
+      "check": "train.json exists",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.367489"
+    },
+    {
+      "check": "val.json exists",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.367931"
+    },
+    {
+      "check": "test.json exists",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.368571"
+    },
+    {
+      "check": "video_metadata.json exists",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.369460"
+    },
+    {
+      "check": "Metadata records not empty",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.371517"
+    },
+    {
+      "check": "Metadata field: station",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.371896"
+    },
+    {
+      "check": "Metadata field: platform_number",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.372032"
+    },
+    {
+      "check": "Metadata field: camera_id",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.372116"
+    },
+    {
+      "check": "Metadata field: train",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.372176"
+    },
+    {
+      "check": "Metadata field: timestamp",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.372227"
+    },
+    {
+      "check": "camera_registry.json exists",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.372581"
+    },
+    {
+      "check": "train_schedules.json exists",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.372739"
+    },
+    {
+      "check": "Train ratio reasonable",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.375904"
+    },
+    {
+      "check": "Valid JSON: camera_registry.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.380739"
+    },
+    {
+      "check": "Valid JSON: class_distribution.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.381715"
+    },
+    {
+      "check": "Valid JSON: train_schedules.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.392346"
+    },
+    {
+      "check": "Valid JSON: validation_report.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.393170"
+    },
+    {
+      "check": "Valid JSON: video_metadata.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.394609"
+    },
+    {
+      "check": "Valid JSON: annotations.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.395769"
+    },
+    {
+      "check": "Valid JSON: synthetic_annotations.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.407086"
+    },
+    {
+      "check": "Valid JSON: test.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.407944"
+    },
+    {
+      "check": "Valid JSON: train.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.408675"
+    },
+    {
+      "check": "Valid JSON: val.json",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.409489"
+    },
+    {
+      "check": "Annotation-metadata cross-reference",
+      "passed": true,
+      "timestamp": "2026-05-12T01:33:06.412169"
+    }
+  ]
+}

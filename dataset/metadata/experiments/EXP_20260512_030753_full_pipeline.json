@@ -1,0 +1,20 @@
+{
+  "experiment_id": "EXP_20260512_030753_full_pipeline",
+  "name": "full_pipeline",
+  "status": "running",
+  "hyperparams": {
+    "epochs_anomaly": 5,
+    "epochs_yolo": 5,
+    "num_synthetic": 2000
+  },
+  "metrics": {},
+  "metric_history": {},
+  "tags": [
+    "full_pipeline",
+    "automated"
+  ],
+  "started_at": "2026-05-12T03:07:53.183606",
+  "ended_at": null,
+  "duration_seconds": null,
+  "notes": ""
+}

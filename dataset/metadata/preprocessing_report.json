@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-05-12T03:08:11.380918",
+  "pipeline": "DatasetPreprocessor",
+  "resolution": [
+    640,
+    480
+  ],
+  "sequence_length": 32,
+  "feature_dim": 32,
+  "stats": {
+    "train": {
+      "total": 86,
+      "sequence_shape": [
+        86,
+        32,
+        32
+      ],
+      "class_distribution": {
+        "normal": 17,
+        "assault": 21,
+        "coercion": 10,
+        "dragging": 10,
+        "suspicious_escort": 7,
+        "isolated_minor": 9,
+        "panic": 7,
+        "crowd_anomaly": 5
+      }
+    },
+    "val": {
+      "total": 19,
+      "sequence_shape": [
+        19,
+        32,
+        32
+      ],
+      "class_distribution": {
+        "normal": 4,
+        "assault": 3,
+        "coercion": 3,
+        "dragging": 3,
+        "suspicious_escort": 1,
+        "isolated_minor": 1,
+        "panic": 1,
+        "crowd_anomaly": 3
+      }
+    },
+    "test": {
+      "total": 19,
+      "sequence_shape": [
+        19,
+        32,
+        32
+      ],
+      "class_distribution": {
+        "normal": 3,
+        "assault": 1,
+        "coercion": 2,
+        "dragging": 1,
+        "suspicious_escort": 1,
+        "isolated_minor": 2,
+        "panic": 5,
+        "crowd_anomaly": 4
+      }
+    }
+  },
+  "output_dir": "C:\\Users\\C aksheth kumar\\Desktop\\DigitalShield\\dataset\\processed\\features"
+}

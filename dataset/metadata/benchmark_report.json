@@ -1,0 +1,201 @@
+{
+  "timestamp": "2026-05-12T03:08:27.648488",
+  "anomaly_classifier": {
+    "model": "AnomalyLSTM",
+    "benchmarks": [
+      {
+        "model": "AnomalyLSTM",
+        "batch_size": 1,
+        "iterations": 500,
+        "mean_ms": 0.191,
+        "median_ms": 0.154,
+        "p95_ms": 0.351,
+        "p99_ms": 0.512,
+        "min_ms": 0.097,
+        "max_ms": 5.687,
+        "throughput_fps": 5237.2
+      },
+      {
+        "model": "AnomalyLSTM",
+        "batch_size": 4,
+        "iterations": 500,
+        "mean_ms": 0.175,
+        "median_ms": 0.144,
+        "p95_ms": 0.247,
+        "p99_ms": 0.386,
+        "min_ms": 0.101,
+        "max_ms": 6.235,
+        "throughput_fps": 22892.7
+      },
+      {
+        "model": "AnomalyLSTM",
+        "batch_size": 8,
+        "iterations": 500,
+        "mean_ms": 0.173,
+        "median_ms": 0.132,
+        "p95_ms": 0.289,
+        "p99_ms": 0.514,
+        "min_ms": 0.104,
+        "max_ms": 0.711,
+        "throughput_fps": 46261.4
+      },
+      {
+        "model": "AnomalyLSTM",
+        "batch_size": 16,
+        "iterations": 500,
+        "mean_ms": 0.209,
+        "median_ms": 0.18,
+        "p95_ms": 0.36,
+        "p99_ms": 0.505,
+        "min_ms": 0.11,
+        "max_ms": 1.11,
+        "throughput_fps": 76502.3
+      },
+      {
+        "model": "AnomalyLSTM",
+        "batch_size": 32,
+        "iterations": 500,
+        "mean_ms": 0.237,
+        "median_ms": 0.201,
+        "p95_ms": 0.4,
+        "p99_ms": 0.597,
+        "min_ms": 0.124,
+        "max_ms": 0.898,
+        "throughput_fps": 135081.9
+      }
+    ]
+  },
+  "yolo_detector": {
+    "model": "YOLOv8n",
+    "benchmarks": [
+      {
+        "model": "YOLOv8n",
+        "batch_size": 1,
+        "iterations": 100,
+        "mean_ms": 5.403,
+        "median_ms": 5.428,
+        "p95_ms": 5.664,
+        "throughput_fps": 185.1
+      },
+      {
+        "model": "YOLOv8n",
+        "batch_size": 4,
+        "iterations": 100,
+        "mean_ms": 20.598,
+        "median_ms": 20.436,
+        "p95_ms": 22.053,
+        "throughput_fps": 194.2
+      },
+      {
+        "model": "YOLOv8n",
+        "batch_size": 8,
+        "iterations": 100,
+        "mean_ms": 40.682,
+        "median_ms": 40.482,
+        "p95_ms": 41.467,
+        "throughput_fps": 196.6
+      }
+    ]
+  },
+  "full_pipeline": {
+    "model": "FullPipeline",
+    "mean_ms": 1.961,
+    "p95_ms": 2.984,
+    "throughput_fps": 510.1
+  },
+  "all_results": [
+    {
+      "model": "AnomalyLSTM",
+      "batch_size": 1,
+      "iterations": 500,
+      "mean_ms": 0.191,
+      "median_ms": 0.154,
+      "p95_ms": 0.351,
+      "p99_ms": 0.512,
+      "min_ms": 0.097,
+      "max_ms": 5.687,
+      "throughput_fps": 5237.2
+    },
+    {
+      "model": "AnomalyLSTM",
+      "batch_size": 4,
+      "iterations": 500,
+      "mean_ms": 0.175,
+      "median_ms": 0.144,
+      "p95_ms": 0.247,
+      "p99_ms": 0.386,
+      "min_ms": 0.101,
+      "max_ms": 6.235,
+      "throughput_fps": 22892.7
+    },
+    {
+      "model": "AnomalyLSTM",
+      "batch_size": 8,
+      "iterations": 500,
+      "mean_ms": 0.173,
+      "median_ms": 0.132,
+      "p95_ms": 0.289,
+      "p99_ms": 0.514,
+      "min_ms": 0.104,
+      "max_ms": 0.711,
+      "throughput_fps": 46261.4
+    },
+    {
+      "model": "AnomalyLSTM",
+      "batch_size": 16,
+      "iterations": 500,
+      "mean_ms": 0.209,
+      "median_ms": 0.18,
+      "p95_ms": 0.36,
+      "p99_ms": 0.505,
+      "min_ms": 0.11,
+      "max_ms": 1.11,
+      "throughput_fps": 76502.3
+    },
+    {
+      "model": "AnomalyLSTM",
+      "batch_size": 32,
+      "iterations": 500,
+      "mean_ms": 0.237,
+      "median_ms": 0.201,
+      "p95_ms": 0.4,
+      "p99_ms": 0.597,
+      "min_ms": 0.124,
+      "max_ms": 0.898,
+      "throughput_fps": 135081.9
+    },
+    {
+      "model": "YOLOv8n",
+      "batch_size": 1,
+      "iterations": 100,
+      "mean_ms": 5.403,
+      "median_ms": 5.428,
+      "p95_ms": 5.664,
+      "throughput_fps": 185.1
+    },
+    {
+      "model": "YOLOv8n",
+      "batch_size": 4,
+      "iterations": 100,
+      "mean_ms": 20.598,
+      "median_ms": 20.436,
+      "p95_ms": 22.053,
+      "throughput_fps": 194.2
+    },
+    {
+      "model": "YOLOv8n",
+      "batch_size": 8,
+      "iterations": 100,
+      "mean_ms": 40.682,
+      "median_ms": 40.482,
+      "p95_ms": 41.467,
+      "throughput_fps": 196.6
+    },
+    {
+      "model": "FullPipeline",
+      "mean_ms": 1.961,
+      "p95_ms": 2.984,
+      "throughput_fps": 510.1
+    }
+  ]
+}

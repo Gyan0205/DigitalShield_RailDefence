@@ -1,0 +1,138 @@
+/* Digital Shield Rail Defense — Enterprise Light Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+/* ── Design Tokens ───────────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg-base:        #F7F4EE;
+  --bg-secondary:   #FFFDF9;
+  --bg-card:        #FFFFFF;
+  --bg-sidebar:     #FAF7F2;
+  --bg-header:      #FFFFFF;
+
+  /* Borders */
+  --border:         #E7E2D9;
+  --border-subtle:  #EEE9E0;
+
+  /* Text */
+  --text-primary:   #1E1E1E;
+  --text-secondary: #5F5F5F;
+  --text-muted:     #8C8C8C;
+  --text-dim:       #B8B0A4;
+
+  /* Severity — muted, enterprise-grade */
+  --critical:       #B42318;
+  --critical-bg:    #FEF2F0;
+  --critical-border:#FBC9C4;
+
+  --high:           #C97A10;
+  --high-bg:        #FFF9ED;
+  --high-border:    #F5D99A;
+
+  --medium:         #3B82F6;
+  --medium-bg:      #EFF6FF;
+  --medium-border:  #BFD9FE;
+
+  --low:            #94A3B8;
+  --low-bg:         #F8FAFC;
+  --low-border:     #E2E8F0;
+
+  /* Accent */
+  --accent:         #2563EB;
+  --accent-light:   #EFF6FF;
+
+  /* Shadows */
+  --shadow-sm:      0 1px 2px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-md:      0 1px 2px rgba(0,0,0,0.04), 0 6px 18px rgba(0,0,0,0.06);
+  --shadow-lg:      0 4px 6px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.08);
+}
+
+/* ── Reset ───────────────────────────────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbars ──────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D4CEC6; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #B8B0A4; }
+
+/* ── Card / Panel ────────────────────────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.panel {
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+}
+
+/* ── Severity utilities ──────────────────────────────────────────────────── */
+.sev-CRITICAL { color: var(--critical); background: var(--critical-bg); border-color: var(--critical-border); }
+.sev-HIGH     { color: var(--high);     background: var(--high-bg);     border-color: var(--high-border); }
+.sev-MEDIUM   { color: var(--medium);   background: var(--medium-bg);   border-color: var(--medium-border); }
+.sev-LOW      { color: var(--low);      background: var(--low-bg);      border-color: var(--low-border); }
+
+/* ── Subtle fade-in ──────────────────────────────────────────────────────── */
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeSlideDown 0.25s ease; }
+
+/* ── Live dot pulse (subtle, single channel) ─────────────────────────────── */
+@keyframes liveDot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.45; }
+}
+.live-dot { animation: liveDot 2s ease-in-out infinite; }
+
+/* ── Status dot ──────────────────────────────────────────────────────────── */
+.dot-green  { background: #22C55E; box-shadow: 0 0 0 2px rgba(34,197,94,0.15); }
+.dot-yellow { background: #F59E0B; }
+.dot-red    { background: #EF4444; }
+.dot-gray   { background: #94A3B8; }
+
+/* ── Section label ───────────────────────────────────────────────────────── */
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ── Hover elevation ─────────────────────────────────────────────────────── */
+.hoverable {
+  transition: box-shadow 0.18s ease, transform 0.15s ease;
+}
+.hoverable:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+/* ── Confidence bar ──────────────────────────────────────────────────────── */
+.conf-bar-track {
+  height: 4px;
+  background: #EEE9E0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.conf-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}

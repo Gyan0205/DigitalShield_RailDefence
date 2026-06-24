@@ -1,0 +1,540 @@
+{
+  "timestamp": "2026-05-12T03:08:27.653260",
+  "duration_seconds": 16.31,
+  "stages": {
+    "preprocessing": {
+      "timestamp": "2026-05-12T03:08:11.380918",
+      "pipeline": "DatasetPreprocessor",
+      "resolution": [
+        640,
+        480
+      ],
+      "sequence_length": 32,
+      "feature_dim": 32,
+      "stats": {
+        "train": {
+          "total": 86,
+          "sequence_shape": [
+            86,
+            32,
+            32
+          ],
+          "class_distribution": {
+            "normal": 17,
+            "assault": 21,
+            "coercion": 10,
+            "dragging": 10,
+            "suspicious_escort": 7,
+            "isolated_minor": 9,
+            "panic": 7,
+            "crowd_anomaly": 5
+          }
+        },
+        "val": {
+          "total": 19,
+          "sequence_shape": [
+            19,
+            32,
+            32
+          ],
+          "class_distribution": {
+            "normal": 4,
+            "assault": 3,
+            "coercion": 3,
+            "dragging": 3,
+            "suspicious_escort": 1,
+            "isolated_minor": 1,
+            "panic": 1,
+            "crowd_anomaly": 3
+          }
+        },
+        "test": {
+          "total": 19,
+          "sequence_shape": [
+            19,
+            32,
+            32
+          ],
+          "class_distribution": {
+            "normal": 3,
+            "assault": 1,
+            "coercion": 2,
+            "dragging": 1,
+            "suspicious_escort": 1,
+            "isolated_minor": 2,
+            "panic": 5,
+            "crowd_anomaly": 4
+          }
+        }
+      },
+      "output_dir": "C:\\Users\\C aksheth kumar\\Desktop\\DigitalShield\\dataset\\processed\\features"
+    },
+    "yolo_training": {
+      "status": "simulated",
+      "model": "yolov8n.pt",
+      "epochs_trained": 5,
+      "best_mAP50": 0.8362,
+      "best_mAP50_95": 0.5362,
+      "precision": 0.8362,
+      "recall": 0.8362,
+      "history": [
+        {
+          "epoch": 1,
+          "mAP50": 0.405,
+          "mAP50-95": 0.225,
+          "precision": 0.485,
+          "recall": 0.445,
+          "box_loss": 0.0715
+        },
+        {
+          "epoch": 2,
+          "mAP50": 0.538,
+          "mAP50-95": 0.328,
+          "precision": 0.598,
+          "recall": 0.568,
+          "box_loss": 0.0658
+        },
+        {
+          "epoch": 3,
+          "mAP50": 0.6393,
+          "mAP50-95": 0.3993,
+          "precision": 0.6793,
+          "recall": 0.6593,
+          "box_loss": 0.0569
+        },
+        {
+          "epoch": 4,
+          "mAP50": 0.7439,
+          "mAP50-95": 0.4739,
+          "precision": 0.7639,
+          "recall": 0.7539,
+          "box_loss": 0.0484
+        },
+        {
+          "epoch": 5,
+          "mAP50": 0.8362,
+          "mAP50-95": 0.5362,
+          "precision": 0.8362,
+          "recall": 0.8362,
+          "box_loss": 0.0386
+        }
+      ],
+      "timestamp": "2026-05-12T03:08:20.027003"
+    },
+    "anomaly_training": {
+      "status": "error",
+      "message": "PyTorch not available"
+    },
+    "evaluation": {
+      "timestamp": "2026-05-12T03:08:20.273830",
+      "overall": {
+        "accuracy": 0.098,
+        "macro_precision": 0.0122,
+        "macro_recall": 0.125,
+        "macro_f1": 0.0223,
+        "weighted_precision": 0.0096,
+        "weighted_recall": 0.098,
+        "weighted_f1": 0.0175,
+        "anomaly_detection_precision": 0.8274,
+        "anomaly_detection_recall": 1.0,
+        "anomaly_detection_f1": 0.9056,
+        "false_alarm_rate": 1.0,
+        "total_samples": 1999
+      },
+      "per_class": {
+        "normal": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "specificity": 1.0,
+          "support": 345,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 345
+        },
+        "assault": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "specificity": 1.0,
+          "support": 318,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 318
+        },
+        "coercion": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "specificity": 1.0,
+          "support": 258,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 258
+        },
+        "dragging": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "specificity": 1.0,
+          "support": 258,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 258
+        },
+        "suspicious_escort": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "specificity": 1.0,
+          "support": 226,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 226
+        },
+        "isolated_minor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "specificity": 1.0,
+          "support": 214,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 214
+        },
+        "panic": {
+          "precision": 0.098,
+          "recall": 1.0,
+          "f1_score": 0.1786,
+          "specificity": 0.0,
+          "support": 196,
+          "true_positives": 196,
+          "false_positives": 1803,
+          "false_negatives": 0
+        },
+        "crowd_anomaly": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "specificity": 1.0,
+          "support": 184,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 184
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          345,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          318,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          258,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          258,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          226,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          214,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          196,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          184,
+          0
+        ]
+      ],
+      "class_names": {
+        "0": "normal",
+        "1": "assault",
+        "2": "coercion",
+        "3": "dragging",
+        "4": "suspicious_escort",
+        "5": "isolated_minor",
+        "6": "panic",
+        "7": "crowd_anomaly"
+      }
+    },
+    "benchmark": {
+      "timestamp": "2026-05-12T03:08:27.648488",
+      "anomaly_classifier": {
+        "model": "AnomalyLSTM",
+        "benchmarks": [
+          {
+            "model": "AnomalyLSTM",
+            "batch_size": 1,
+            "iterations": 500,
+            "mean_ms": 0.191,
+            "median_ms": 0.154,
+            "p95_ms": 0.351,
+            "p99_ms": 0.512,
+            "min_ms": 0.097,
+            "max_ms": 5.687,
+            "throughput_fps": 5237.2
+          },
+          {
+            "model": "AnomalyLSTM",
+            "batch_size": 4,
+            "iterations": 500,
+            "mean_ms": 0.175,
+            "median_ms": 0.144,
+            "p95_ms": 0.247,
+            "p99_ms": 0.386,
+            "min_ms": 0.101,
+            "max_ms": 6.235,
+            "throughput_fps": 22892.7
+          },
+          {
+            "model": "AnomalyLSTM",
+            "batch_size": 8,
+            "iterations": 500,
+            "mean_ms": 0.173,
+            "median_ms": 0.132,
+            "p95_ms": 0.289,
+            "p99_ms": 0.514,
+            "min_ms": 0.104,
+            "max_ms": 0.711,
+            "throughput_fps": 46261.4
+          },
+          {
+            "model": "AnomalyLSTM",
+            "batch_size": 16,
+            "iterations": 500,
+            "mean_ms": 0.209,
+            "median_ms": 0.18,
+            "p95_ms": 0.36,
+            "p99_ms": 0.505,
+            "min_ms": 0.11,
+            "max_ms": 1.11,
+            "throughput_fps": 76502.3
+          },
+          {
+            "model": "AnomalyLSTM",
+            "batch_size": 32,
+            "iterations": 500,
+            "mean_ms": 0.237,
+            "median_ms": 0.201,
+            "p95_ms": 0.4,
+            "p99_ms": 0.597,
+            "min_ms": 0.124,
+            "max_ms": 0.898,
+            "throughput_fps": 135081.9
+          }
+        ]
+      },
+      "yolo_detector": {
+        "model": "YOLOv8n",
+        "benchmarks": [
+          {
+            "model": "YOLOv8n",
+            "batch_size": 1,
+            "iterations": 100,
+            "mean_ms": 5.403,
+            "median_ms": 5.428,
+            "p95_ms": 5.664,
+            "throughput_fps": 185.1
+          },
+          {
+            "model": "YOLOv8n",
+            "batch_size": 4,
+            "iterations": 100,
+            "mean_ms": 20.598,
+            "median_ms": 20.436,
+            "p95_ms": 22.053,
+            "throughput_fps": 194.2
+          },
+          {
+            "model": "YOLOv8n",
+            "batch_size": 8,
+            "iterations": 100,
+            "mean_ms": 40.682,
+            "median_ms": 40.482,
+            "p95_ms": 41.467,
+            "throughput_fps": 196.6
+          }
+        ]
+      },
+      "full_pipeline": {
+        "model": "FullPipeline",
+        "mean_ms": 1.961,
+        "p95_ms": 2.984,
+        "throughput_fps": 510.1
+      },
+      "all_results": [
+        {
+          "model": "AnomalyLSTM",
+          "batch_size": 1,
+          "iterations": 500,
+          "mean_ms": 0.191,
+          "median_ms": 0.154,
+          "p95_ms": 0.351,
+          "p99_ms": 0.512,
+          "min_ms": 0.097,
+          "max_ms": 5.687,
+          "throughput_fps": 5237.2
+        },
+        {
+          "model": "AnomalyLSTM",
+          "batch_size": 4,
+          "iterations": 500,
+          "mean_ms": 0.175,
+          "median_ms": 0.144,
+          "p95_ms": 0.247,
+          "p99_ms": 0.386,
+          "min_ms": 0.101,
+          "max_ms": 6.235,
+          "throughput_fps": 22892.7
+        },
+        {
+          "model": "AnomalyLSTM",
+          "batch_size": 8,
+          "iterations": 500,
+          "mean_ms": 0.173,
+          "median_ms": 0.132,
+          "p95_ms": 0.289,
+          "p99_ms": 0.514,
+          "min_ms": 0.104,
+          "max_ms": 0.711,
+          "throughput_fps": 46261.4
+        },
+        {
+          "model": "AnomalyLSTM",
+          "batch_size": 16,
+          "iterations": 500,
+          "mean_ms": 0.209,
+          "median_ms": 0.18,
+          "p95_ms": 0.36,
+          "p99_ms": 0.505,
+          "min_ms": 0.11,
+          "max_ms": 1.11,
+          "throughput_fps": 76502.3
+        },
+        {
+          "model": "AnomalyLSTM",
+          "batch_size": 32,
+          "iterations": 500,
+          "mean_ms": 0.237,
+          "median_ms": 0.201,
+          "p95_ms": 0.4,
+          "p99_ms": 0.597,
+          "min_ms": 0.124,
+          "max_ms": 0.898,
+          "throughput_fps": 135081.9
+        },
+        {
+          "model": "YOLOv8n",
+          "batch_size": 1,
+          "iterations": 100,
+          "mean_ms": 5.403,
+          "median_ms": 5.428,
+          "p95_ms": 5.664,
+          "throughput_fps": 185.1
+        },
+        {
+          "model": "YOLOv8n",
+          "batch_size": 4,
+          "iterations": 100,
+          "mean_ms": 20.598,
+          "median_ms": 20.436,
+          "p95_ms": 22.053,
+          "throughput_fps": 194.2
+        },
+        {
+          "model": "YOLOv8n",
+          "batch_size": 8,
+          "iterations": 100,
+          "mean_ms": 40.682,
+          "median_ms": 40.482,
+          "p95_ms": 41.467,
+          "throughput_fps": 196.6
+        },
+        {
+          "model": "FullPipeline",
+          "mean_ms": 1.961,
+          "p95_ms": 2.984,
+          "throughput_fps": 510.1
+        }
+      ]
+    }
+  },
+  "experiment_id": "EXP_20260512_030811_full_pipeline",
+  "model_registry": {
+    "total_versions": 1,
+    "models": {
+      "yolov8_person_detect": {
+        "count": 1,
+        "versions": [
+          "1.5.0"
+        ]
+      }
+    }
+  },
+  "experiment_stats": {
+    "total_experiments": 2,
+    "by_status": {
+      "running": 1,
+      "completed": 1
+    }
+  }
+}

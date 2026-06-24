@@ -1,0 +1,52 @@
+{
+  "status": "simulated",
+  "model": "yolov8n.pt",
+  "epochs_trained": 5,
+  "best_mAP50": 0.8362,
+  "best_mAP50_95": 0.5362,
+  "precision": 0.8362,
+  "recall": 0.8362,
+  "history": [
+    {
+      "epoch": 1,
+      "mAP50": 0.405,
+      "mAP50-95": 0.225,
+      "precision": 0.485,
+      "recall": 0.445,
+      "box_loss": 0.0715
+    },
+    {
+      "epoch": 2,
+      "mAP50": 0.538,
+      "mAP50-95": 0.328,
+      "precision": 0.598,
+      "recall": 0.568,
+      "box_loss": 0.0658
+    },
+    {
+      "epoch": 3,
+      "mAP50": 0.6393,
+      "mAP50-95": 0.3993,
+      "precision": 0.6793,
+      "recall": 0.6593,
+      "box_loss": 0.0569
+    },
+    {
+      "epoch": 4,
+      "mAP50": 0.7439,
+      "mAP50-95": 0.4739,
+      "precision": 0.7639,
+      "recall": 0.7539,
+      "box_loss": 0.0484
+    },
+    {
+      "epoch": 5,
+      "mAP50": 0.8362,
+      "mAP50-95": 0.5362,
+      "precision": 0.8362,
+      "recall": 0.8362,
+      "box_loss": 0.0386
+    }
+  ],
+  "timestamp": "2026-05-12T03:08:20.027003"
+}

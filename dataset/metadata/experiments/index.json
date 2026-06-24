@@ -1,0 +1,126 @@
+[
+  {
+    "experiment_id": "EXP_20260512_030753_full_pipeline",
+    "name": "full_pipeline",
+    "status": "running",
+    "hyperparams": {
+      "epochs_anomaly": 5,
+      "epochs_yolo": 5,
+      "num_synthetic": 2000
+    },
+    "metrics": {
+      "preprocessing_sequences": 86
+    },
+    "metric_history": {
+      "preprocessing_sequences": [
+        {
+          "value": 86,
+          "step": null,
+          "timestamp": "2026-05-12T03:07:53.252390"
+        }
+      ]
+    },
+    "tags": [
+      "full_pipeline",
+      "automated"
+    ],
+    "started_at": "2026-05-12T03:07:53.183606",
+    "ended_at": null,
+    "duration_seconds": null,
+    "notes": ""
+  },
+  {
+    "experiment_id": "EXP_20260512_030811_full_pipeline",
+    "name": "full_pipeline",
+    "status": "completed",
+    "hyperparams": {
+      "epochs_anomaly": 5,
+      "epochs_yolo": 5,
+      "num_synthetic": 2000
+    },
+    "metrics": {
+      "preprocessing_sequences": 86,
+      "yolo_mAP50": 0.8362,
+      "yolo_precision": 0.8362,
+      "yolo_recall": 0.8362,
+      "eval_accuracy": 0.098,
+      "eval_macro_f1": 0.0223,
+      "eval_weighted_f1": 0.0175,
+      "eval_anomaly_f1": 0.9056,
+      "eval_false_alarm": 1.0
+    },
+    "metric_history": {
+      "preprocessing_sequences": [
+        {
+          "value": 86,
+          "step": null,
+          "timestamp": "2026-05-12T03:08:11.381948"
+        }
+      ],
+      "yolo_mAP50": [
+        {
+          "value": 0.8362,
+          "step": null,
+          "timestamp": "2026-05-12T03:08:20.027873"
+        }
+      ],
+      "yolo_precision": [
+        {
+          "value": 0.8362,
+          "step": null,
+          "timestamp": "2026-05-12T03:08:20.028402"
+        }
+      ],
+      "yolo_recall": [
+        {
+          "value": 0.8362,
+          "step": null,
+          "timestamp": "2026-05-12T03:08:20.029014"
+        }
+      ],
+      "eval_accuracy": [
+        {
+          "value": 0.098,
+          "step": null,
+          "timestamp": "2026-05-12T03:08:20.276503"
+        }
+      ],
+      "eval_macro_f1": [
+        {
+          "value": 0.0223,
+          "step": null,
+          "timestamp": "2026-05-12T03:08:20.277242"
+        }
+      ],
+      "eval_weighted_f1": [
+        {
+          "value": 0.0175,
+          "step": null,
+          "timestamp": "2026-05-12T03:08:20.278292"
+        }
+      ],
+      "eval_anomaly_f1": [
+        {
+          "value": 0.9056,
+          "step": null,
+          "timestamp": "2026-05-12T03:08:20.279280"
+        }
+      ],
+      "eval_false_alarm": [
+        {
+          "value": 1.0,
+          "step": null,
+          "timestamp": "2026-05-12T03:08:20.280192"
+        }
+      ]
+    },
+    "tags": [
+      "full_pipeline",
+      "automated"
+    ],
+    "started_at": "2026-05-12T03:08:11.346193",
+    "ended_at": "2026-05-12T03:08:27.652076",
+    "duration_seconds": 16.31,
+    "notes": "Full pipeline in 16.3s"
+  }
+]

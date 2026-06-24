@@ -1,0 +1,41 @@
+[
+  {
+    "video_id": "d1da4b9aa7ae",
+    "video_path": "C:\\Users\\C aksheth kumar\\Desktop\\DigitalShield\\dataset\\raw\\simulated\\dragging\\sim_dragging_81601.mp4",
+    "video_name": "sim_dragging_81601.mp4",
+    "dataset": "simulated",
+    "category": "dragging",
+    "class_id": 0,
+    "class_name": "normal",
+    "is_anomalous": false,
+    "is_trafficking": false,
+    "split": "val",
+    "temporal_annotations": []
+  },
+  {
+    "video_id": "f6221c13b019",
+    "video_path": "C:\\Users\\C aksheth kumar\\Desktop\\DigitalShield\\dataset\\raw\\simulated\\panic\\sim_panic_51688.mp4",
+    "video_name": "sim_panic_51688.mp4",
+    "dataset": "simulated",
+    "category": "panic",
+    "class_id": 0,
+    "class_name": "normal",
+    "is_anomalous": false,
+    "is_trafficking": false,
+    "split": "val",
+    "temporal_annotations": []
+  },
+  {
+    "video_id": "f9704bc3de34",
+    "video_path": "C:\\Users\\C aksheth kumar\\Desktop\\DigitalShield\\dataset\\raw\\simulated\\normal\\sim_normal_16629.mp4",
+    "video_name": "sim_normal_16629.mp4",
+    "dataset": "simulated",
+    "category": "normal",
+    "class_id": 0,
+    "class_name": "normal",
+    "is_anomalous": false,
+    "is_trafficking": false,
+    "split": "val",
+    "temporal_annotations": []
+  }
+]

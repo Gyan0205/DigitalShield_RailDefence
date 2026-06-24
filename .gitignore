@@ -1,0 +1,62 @@
+# Digital Shield Rail Defense — .gitignore
+# ==========================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.so
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Dataset files (large, downloaded separately)
+dataset/raw/
+dataset/processed/
+dataset/models/weights/*.pt
+dataset/models/weights/*.pth
+dataset/models/weights/*.json
+dataset/models/checkpoints/
+
+# Keep metadata and annotations in git
+!dataset/metadata/.gitkeep
+!dataset/annotations/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs/
+*.log
+
+# Docker
+.docker/
+
+# Node/Frontend
+node_modules/
+frontend/dist/
+frontend/build/
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temporary files
+*.partial
+*.tmp

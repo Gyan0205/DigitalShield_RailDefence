@@ -1,0 +1,41 @@
+{
+  "total_records": 21,
+  "anomalous_count": 12,
+  "normal_count": 9,
+  "night_count": 6,
+  "peak_hour_count": 7,
+  "weekend_count": 7,
+  "station_distribution": {
+    "Secunderabad Junction": 21
+  },
+  "anomaly_distribution": {
+    "normal": 9,
+    "dragging": 3,
+    "loitering": 3,
+    "panic_behavior": 3,
+    "suspicious_escort": 3
+  },
+  "hourly_distribution": {
+    "3": 2,
+    "4": 3,
+    "6": 1,
+    "8": 2,
+    "9": 3,
+    "11": 1,
+    "13": 1,
+    "15": 2,
+    "16": 2,
+    "17": 1,
+    "19": 1,
+    "20": 1,
+    "23": 1
+  },
+  "risk_tier_distribution": {
+    "ELEVATED": 21
+  },
+  "top_5_stations": {
+    "Secunderabad Junction": 21
+  },
+  "unique_cameras": 12,
+  "unique_trains": 19
+}
