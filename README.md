@@ -45,11 +45,11 @@ docker compose up -d
 ## 🏗️ Architecture
 
 ```
-┌──────────────────── NGINX :80 ────────────────────┐
+┌──────────────────── NGINX :80 ─────────────────────┐
 │         React Dashboard (Vite/Tailwind)            │
 ├────────────────────────────────────────────────────┤
 │  FastAPI Backend :8000                             │
-│  ├─ 6 Core API Endpoints                          │
+│  ├─ 6 Core API Endpoints                           │
 │  ├─ Fusion Engine (4-source Dempster-Shafer)       │
 │  ├─ XAI Pipeline (10-stage explainable AI)         │
 │  ├─ Train Intelligence (300 trains, 49 stations)   │
